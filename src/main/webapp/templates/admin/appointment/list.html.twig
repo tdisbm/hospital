@@ -1,0 +1,27 @@
+{% extends "admin/layout.html.twig" %}
+
+{% block head %}
+{% endblock %}
+
+{% block body_container %}
+    <h1>Appointment list</h1>
+    <div id="appointment-grid" style="height: 600px;width:100%" class="ag-theme-fresh"></div>
+    <div class="ag-paging-panel ag-font-style">
+        <span class="ag-paging-row-summary-panel">
+            <span class="pagination from-item">0</span> to <span class="pagination to-item">0</span> of <span class="pagination of-item">0</span>
+        </span>
+        <span class="ag-paging-page-summary-panel">
+            <button class="ag-paging-button pagination-first" style="opacity: 0">First</button>
+            <button class="ag-paging-button pagination-previous">Previous</button>
+            Page <span class="pagination current-page">0</span> of <span class="pagination from-page">0</span>
+            <button class="ag-paging-button pagination-next">Next</button>
+            <button class="ag-paging-button pagination-last" style="opacity: 0">Last</button>
+        </span>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript"
+            src="/vendor/require/require.js"
+            data-main="/js/admin/app"></script>
+{% endblock %}

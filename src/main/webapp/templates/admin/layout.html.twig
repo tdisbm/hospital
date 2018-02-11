@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    {% block meta %}
+    <!-- Behavioral Meta Data -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    {% endblock %}
+
+    <title>{% block title %}Admin Page{% endblock %}</title>
+
+    {% block head %}{% endblock %}
+
+    {% block stylesheets %}
+        <link type="text/css" rel="stylesheet" href="/vendor/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="/vendor/bootstrap-3.3.7/dist/css/bootstrap-theme.min.css">
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+        {% block header %}
+        {% endblock %}
+
+        <div class="container container-body">
+            {% block body_container %}
+            {% endblock %}
+        </div>
+
+        {% block footer %}
+        {% endblock %}
+    {% endblock %}
+
+    {% block javascripts %}
+    {% endblock %}
+</body>
+</html>
